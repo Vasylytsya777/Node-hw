@@ -5,7 +5,6 @@ const { v4: uuidv4 } = require("uuid");
 // const contactsPath = "./db/contacts.json";
 // const contactsPath = path.join(__dirname, "./db/contacts.json");
 const contactsPath = path.join("./db", "contacts.json");
-console.log(contactsPath);
 
 // TODO: задокументировать каждую функцию
 const listContacts = async () => {
@@ -32,9 +31,7 @@ const removeContact = async (contactId) => {
     const data = await fs.readFile(contactsPath);
     const contactsList = JSON.parse(data);
     const filteredList = contactsList.filter((contact) => contact.id !== contactId);
-
     await fs.writeFile(contactsPath, JSON.stringify(filteredList, null, 2));
-
     console.table(filteredList);
   } catch (error) {
     console.error(error);
@@ -43,17 +40,10 @@ const removeContact = async (contactId) => {
 
 const addContact = async (name, email, phone) => {
   try {
-    const newContact = {
-      id: uuidv4(),
-      name,
-      email,
-      phone,
-    };
+    const newContact = { id: uuidv4(), name, email, phone };
     const data = await fs.readFile(contactsPath);
     const newContactsList = [...JSON.parse(data), newContact];
-
     await fs.writeFile(contactsPath, JSON.stringify(newContactsList, null, 2));
-
     console.table(newContactsList);
   } catch (error) {
     console.error(error);

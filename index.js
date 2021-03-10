@@ -1,5 +1,3 @@
-console.log("Start project");
-
 const argv = require("yargs").argv;
 const { listContacts, getContactById, removeContact, addContact } = require("./contacts");
 
