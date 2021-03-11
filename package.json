@@ -1,0 +1,29 @@
+{
+  "name": "Node-hw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "uuid": "^8.3.2",
+    "yargs": "^16.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vasylytsya777/Node-hw.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vasylytsya777/Node-hw/issues"
+  },
+  "homepage": "https://github.com/Vasylytsya777/Node-hw#readme"
+}
